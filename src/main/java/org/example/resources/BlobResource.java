@@ -83,7 +83,7 @@ public class BlobResource {
 	
 	@GET
 	@Path("/accountDetailsJson")
-	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+	@Produces(MediaType.APPLICATION_JSON_TYPE + ";charset=utf-8")
 	public String getAccounDetailsJson(){
 		BankAccount ba = new BankAccount();
 		return ba;
