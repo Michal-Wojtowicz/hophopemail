@@ -73,5 +73,11 @@ public class BlobResource {
 	public String testMessage() {
 		return "Trololo";
 	}
+	
+	@GET
+	@Path("/userDetails")
+	public String getUserDetails(){
+		return "mgr inż. Michał Wójtowicz";
+	}
 
 }
