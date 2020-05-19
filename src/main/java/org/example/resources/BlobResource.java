@@ -80,5 +80,40 @@ public class BlobResource {
 	public String getUserDetails(){
 		return "mgr inż. Michał Wójtowicz";
 	}
+	
+	@GET
+	@Path("/accountDetailsJson")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+	public String getAccounDetailsJson(){
+		BankAccount ba = new BankAccount();
+		return ba;
+	}
+	
+	public class BankAccount{
+		
+		public string accountOwnerName;
+		public long amount;
+		
+		public BankAccount(){
+			accountOwnerName = "mgr inż. Michał Wójtowicz";
+			amount = 1234.56;
+		}
+		
+		public string getAccountOwnerName(){
+			return accountOwnerName;
+		}
+		
+		public void setAccountOwnerName(string accountOwnerName){
+			this.accountOwnerName=accountOwnerName;
+		}
+		
+		public long getAmount(){
+			return amount;
+		}
+		
+		public void setAmount(long amount){
+			this.amount=amount;
+		}
+	}
 
 }
