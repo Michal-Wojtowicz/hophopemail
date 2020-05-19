@@ -19,7 +19,7 @@ import javax.ws.rs.core.StreamingOutput;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 
-@Path("/blob")
+@Path("/academy")
 public class BlobResource {
 
 	@GET
@@ -76,6 +76,7 @@ public class BlobResource {
 	
 	@GET
 	@Path("/userDetails")
+	@Produces(MediaType.TEXT_PLAIN + ";charset=utf-8")
 	public String getUserDetails(){
 		return "mgr inż. Michał Wójtowicz";
 	}
